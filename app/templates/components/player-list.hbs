@@ -1,0 +1,12 @@
+<h4>Players</h4>
+
+<form {{action "addPlayer" nameToAdd on="submit"}}>
+  {{input value=nameToAdd}}
+  <button>Add</button>
+</form>
+
+<ul>
+  {{#each store.state.players as |player|}}
+    <li>{{player.name}}</li>
+  {{/each}}
+</ul>
